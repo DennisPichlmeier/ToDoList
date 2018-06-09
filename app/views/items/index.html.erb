@@ -1,1 +1,7 @@
 <h1>Hallo Welt!</h1>
+<button type="button" class="btn btn-default"><%= link_to "Neue Aufgabe", new_item_path%> </button>
+<hr>
+<% @items.each do |item| %>
+  <h2><%= item.title%></h2>
+  <p><%= item.description%></p>
+<% end %>
